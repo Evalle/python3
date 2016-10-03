@@ -2,28 +2,35 @@
 
 import random, sys, string
 
-keyStr = "methinks it is like a weasel"
+keystr = "methinks it is like a weasel"
 resultstr = list()
-quoteLen = len(keyStr)
+quotelen = len(keystr)
 
 def string_generator(resultstr):
-    """ generate random string and add it to resultstr (global) """
-    for l in range(27):
+    """ generate random string and add it to resultstr """
+    for l in range(quotelen):
         resultstr.append(random.choice(string.ascii_lowercase+' '))
     resultstr =  ''.join(resultstr)
     return resultstr
 
-def score(resultstr, keyStr):
+def score(resultstr, keystr):
     """ compare keystr with resultstr and give the score for each compare """ 
-    resultstr = 
-    for i,k in zip(
+    scorenum = 0
+    keystr = keystr.split()
+    resultstr = (''.join(resultstr)).split()
+    for i,j in zip(keystr, resultstr):
+        if i == j:
+            scorenum += 1
+    scorecount = (scorenum / quotelen) * 100
+    print(resultstr)
+    print(scorecount)
 
-
-def iterator(resultstr, keyStr):
+def iterator(resultstr, keystr):
     """ run string_generator and compare it's result with keystring 1000 times """ 
     i = 1000
     while i > 0:
         string_generator(resultstr)
-        comparator(resultstr, keystr)
+        score(resultstr, keystr)
         i -= 1
+
 iterator(resultstr, keystr)

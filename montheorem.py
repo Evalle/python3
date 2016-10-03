@@ -6,32 +6,27 @@ import sys
 keystr = "methinks it is like a weasel"
 resultstr = list()
 
-def string_generator():
+def string_generator(resultstr):
     """ generate random string and add it to resultstr (global) """
-    global resultstr
-    
     for l in range(27):
         resultstr.append(random.choice(" abcdefghijklmnopqrstuvwxyz"))
     resultstr =  ''.join(resultstr)
     return resultstr
 
-def comparator():
+def comparator(resultstr, keystr):
     """ compare keystr with resultstr """ 
-    global resultstr, keystr
-    
+    resultstr = ''.join(resultstr)
     if resultstr == keystr:
         print("100%!")
         sys.exit(0)
-#    else:
-#        print("miss")
+    else:
+        print(resultstr)
 
-def iterator():
+def iterator(resultstr, keystr):
     """ run string_generator and compare it's result with keystring 1000 times """ 
-    global resultstr, keystr
-    
     i = 1000
     while i > 0:
-        string_generator()
-        comparator()
+        string_generator(resultstr)
+        comparator(resultstr, keystr)
 
-iterator()
+iterator(resultstr, keystr)

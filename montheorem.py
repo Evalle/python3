@@ -28,5 +28,5 @@ def iterator(resultstr, keystr):
     while i > 0:
         string_generator(resultstr)
         comparator(resultstr, keystr)
-
+        i -= 1
 iterator(resultstr, keystr)

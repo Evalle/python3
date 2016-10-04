@@ -11,4 +11,15 @@ def generator(quotalen):
         ranline.append(random.choice(string.ascii_lowercase+' '))
     return ''.join(ranline)
 
-print(generator(quotelen))
+def score(quote,quotelen):
+    """ compare random line with quote and mark it """ 
+    ranline = generator(quotelen)
+    scorenum = 0
+    for i,k in zip(quote,ranline):
+        if i == k:
+            scorenum += 1
+    print(quote)
+    print(ranline)
+    return scorenum
+
+print(score(quote,quotelen))

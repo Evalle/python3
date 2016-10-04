@@ -15,11 +15,23 @@ def score(quote):
     ranline = generator(quote)
     scorenum = 0
     for i,k in zip(quote,ranline):
-        print(i,k)
         if i == k:
             scorenum += 1
     score_percent = (scorenum / len(quote)) * 100
-    print(scorenum)
-    return score_percent
+    rounded_percent = round(score_percent)
+    return rounded_percent
 
-print(score(quote))
+def runner(quote):
+    """ run score function 10 million times 
+    and find out the biggest hit """ 
+    biggest = 0
+    i = 10000000
+    while i > 0:
+        result = (score(quote))
+        if result > biggest:
+            biggest = result
+        i -= 1
+    print("====")
+    print(biggest)
+
+runner(quote)

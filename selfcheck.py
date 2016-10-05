@@ -9,7 +9,7 @@ def gcd(m, n):
     return n
 
 # Fraction class
-# To do: multiplication, division, substraction and comparison operators (<. >)
+# To do:  division, substraction and comparison operators (<. >)
 
 class Fraction:
 
@@ -31,14 +31,21 @@ class Fraction:
         new_znam = self.znam * other_fr.znam
         common = gcd(new_chis, new_znam)
         return Fraction(new_chis // common, new_znam // common)
+    
+    def __div__(self, other_fr):
+        new_chis = self.chis * other_fr.znam
+        new_znam = self.znam * other_fr.chis
+        common = gcd(new_chis, new_znam)
+        return Fraction(new_chis // common, new_znam // common)
 
-    def __eq__(self, other):
-        first_num = self.chis * other.znam
-        second_num = self.znam * other.chis
+    def __eq__(self, other_fr):
+        first_num = self.chis * other_fr.znam
+        second_num = self.znam * other_fr.chis
         return first_num == second_num
 
 f1 = Fraction(1, 2)
-f2 = Fraction(1, 2)
+f2 = Fraction(3, 4)
 print(f1 + f2)
 print(f1 == f2)
 print(f1 * f2)
+print(f1 / f2)

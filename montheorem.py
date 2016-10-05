@@ -10,11 +10,10 @@ def generator(quote):
         ranline.append(random.choice(string.ascii_lowercase+' '))
     return ''.join(ranline)
 
-def score(quote):
+def score(quote, ranstr):
     """ compare random line with quote and mark it """ 
-    ranline = generator(quote)
     scorenum = 0
-    for i,k in zip(quote,ranline):
+    for i,k in zip(quote,ranstr):
         if i == k:
             scorenum += 1
     score_percent = (scorenum / len(quote)) * 100
@@ -24,12 +23,16 @@ def score(quote):
 def runner(quote):
     """ run score function 10 million times 
     and find out the biggest hit """ 
+    ranline = generator(quote)
     biggest = 0
-    i = 10000000
+    i = 1000000
     while i > 0:
-        result = (score(quote))
+        result = (score(quote, ranline))
         if result > biggest:
             biggest = result
+            print(ranline)
+            if biggest == 100:
+                sys.exit(0)
         i -= 1
     print("====")
     print(biggest)

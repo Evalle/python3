@@ -8,8 +8,6 @@ def gcd(m, n):
         n = old_m % old_n
     return n
 
-# Fraction class
-# To do: comparison operators (<. >)
 
 class Fraction:
 
@@ -49,10 +47,22 @@ class Fraction:
         second_num = self.znam * other_fr.chis
         return first_num == second_num
 
+    def __lt__(self, other_fr):
+        first_num = self.chis * other_fr.znam
+        second_num = self.znam * other_fr.chis
+        return first_num < second_num
+
+    def __gt__(self, other_fr):
+        first_num = self.chis * other_fr.znam
+        second_num = self.znam * other_fr.chis
+        return first_num > second_num
+
 f1 = Fraction(1, 2)
 f2 = Fraction(3, 4)
 print(f1 + f2)
 print(f1 - f2)
-print(f1 == f2)
 print(f1 * f2)
 print(f1 / f2)
+print(f1 == f2)
+print(f1 < f2)
+print(f1 > f2)

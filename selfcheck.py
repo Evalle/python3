@@ -21,10 +21,15 @@ class Fraction:
     def __add__(self, other_fr):
         new_chis = self.chis * other_fr.znam + other_fr.chis * self.znam
         new_znam = self.znam * other_fr.znam
-        return Fraction(new_chis, new_znam)
+        common = gcd(new_chis, new_znam)
+        return Fraction(new_chis // common, new_znam // common)
 
+    def __eq__(self, other):
+        first_num = self.chis * other.znam
+        second_num = self.znam * other.chis
+        return first_num == second_num
 
-f1 = Fraction(1, 4)
+f1 = Fraction(1, 2)
 f2 = Fraction(1, 2)
-f3 = f1 + f2
-print(f3)
+print(f1 + f2)
+print(f1 == f2)

@@ -72,14 +72,3 @@ class Fraction:
         first_num = self.chis * other_fr.znam
         second_num = self.znam * other_fr.chis
         return first_num >= second_num
-
-# Example, testing
-f1 = Fraction(1, 2)
-f2 = Fraction(1, 2)
-#print(f1 + f2)
-#print(f1 - f2)
-#print(f1 * f2)
-#print(f1 >= f2)
-#print(f1 == f2)
-#print(f1 < f2)
-#print(f1 > f2)

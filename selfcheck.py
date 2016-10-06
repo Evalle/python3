@@ -58,19 +58,28 @@ class Fraction:
         second_num = self.znam * other_fr.chis
         return first_num < second_num
 
+    def __le__(self, other_fr):
+        first_num = self.chis * other_fr.znam
+        second_num = self.znam * other_fr.chis
+        return first_num <= second_num
+
     def __gt__(self, other_fr):
         first_num = self.chis * other_fr.znam
         second_num = self.znam * other_fr.chis
         return first_num > second_num
+ 
+    def __ge_(self, other_fr):
+        first_num = self.chis * other_fr.znam
+        second_num = self.znam * other_fr.chis
+        return first_num >= second_num
 
+# Example, testing
 f1 = Fraction(1, 2)
-f2 = Fraction(3, 4)
-f2.get_chis()
-f2.get_znam()
+f2 = Fraction(1, 2)
 #print(f1 + f2)
 #print(f1 - f2)
 #print(f1 * f2)
-print(f1 / f2)
+#print(f1 >= f2)
 #print(f1 == f2)
 #print(f1 < f2)
 #print(f1 > f2)

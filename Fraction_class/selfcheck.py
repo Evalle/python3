@@ -25,10 +25,10 @@ class Fraction:
         return Fraction(new_chis // common, new_znam // common)
 
     def get_chis(self):
-        print(self.chis)
+        return self.chis
 
     def get_znam(self):
-        print(self.znam)
+        return self.znam
 
     def __sub__(self, other_fr):
         new_chis = self.chis * other_fr.znam - other_fr.chis * self.znam
@@ -53,6 +53,11 @@ class Fraction:
         second_num = self.znam * other_fr.chis
         return first_num == second_num
 
+    def __ne__(self, other_fr):
+        first_num == self.chis * other_fr.znam
+        second_num == self.chis * other_fr.znam
+        return first_num != second_num
+    
     def __lt__(self, other_fr):
         first_num = self.chis * other_fr.znam
         second_num = self.znam * other_fr.chis
@@ -72,3 +77,7 @@ class Fraction:
         first_num = self.chis * other_fr.znam
         second_num = self.znam * other_fr.chis
         return first_num >= second_num
+
+f1 = Fraction(1,2)
+f1.get_chis()
+print(f1)

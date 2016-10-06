@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 def gcd(m, n):
     while m % n != 0:
         old_m = m
@@ -42,7 +42,7 @@ class Fraction:
         common = gcd(new_chis, new_znam)
         return Fraction(new_chis // common, new_znam // common)
 
-    def __div__(self, other_fr):
+    def __truediv__(self, other_fr):
         new_chis = self.chis * other_fr.znam
         new_znam = self.znam * other_fr.chis
         common = gcd(new_chis, new_znam)
@@ -70,7 +70,7 @@ f2.get_znam()
 #print(f1 + f2)
 #print(f1 - f2)
 #print(f1 * f2)
-#print(f1 / f2)
+print(f1 / f2)
 #print(f1 == f2)
 #print(f1 < f2)
 #print(f1 > f2)

@@ -24,6 +24,12 @@ class Fraction:
         common = gcd(new_chis, new_znam)
         return Fraction(new_chis // common, new_znam // common)
 
+    def get_chis(self):
+        print(self.chis)
+
+    def get_znam(self):
+        print(self.znam)
+
     def __sub__(self, other_fr):
         new_chis = self.chis * other_fr.znam - other_fr.chis * self.znam
         new_znam = self.znam * other_fr.znam
@@ -59,10 +65,12 @@ class Fraction:
 
 f1 = Fraction(1, 2)
 f2 = Fraction(3, 4)
-print(f1 + f2)
-print(f1 - f2)
-print(f1 * f2)
-print(f1 / f2)
-print(f1 == f2)
-print(f1 < f2)
-print(f1 > f2)
+f2.get_chis()
+f2.get_znam()
+#print(f1 + f2)
+#print(f1 - f2)
+#print(f1 * f2)
+#print(f1 / f2)
+#print(f1 == f2)
+#print(f1 < f2)
+#print(f1 > f2)

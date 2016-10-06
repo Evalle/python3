@@ -7,8 +7,8 @@ python:
   - "3.5-dev" # 3.5 development branch
   - "nightly" # currently points to 3.6-dev
 before_install:
-  - pip install pytest
-script: pytest Fraction_class/test_assert1.py
+    - pip install pytest pytest-cov
+script: py.test Fraction_class/test_assert1.py
 notifications:
   email: false
 sudo: false

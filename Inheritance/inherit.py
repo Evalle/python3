@@ -28,3 +28,14 @@ class BinaryGate(LogicGate):
 
     def get_pinB(self):
         return int(input("Enter Pin B input for gate " + self.get_label() + "-->"))
+
+
+class UnaryGate(LogicGate):
+
+    def __init__(self, n):
+        LogicGate.__init__(self, n)
+
+        self.pin = None
+
+    def get_pin(self):
+        return int(input("Enter Pin A input for gate " + self.get_label() + "-->"))

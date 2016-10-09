@@ -61,10 +61,10 @@ class OrGate(BinaryGate):
     def __init__(self, n):
         BinaryGate.__init__(self, n)
 
-    def perfrom_gate_logic(self):
+    def perform_gate_logic(self):
 
-        a = self.get.pinA()
-        b = self.get.pinB()
+        a = self.get_pinA()
+        b = self.get_pinB()
         if a == 0 and b == 0:
             return 0
         else:
@@ -76,9 +76,9 @@ class NotGate(UnaryGate):
     def __init__(self, n):
         UnaryGate.__init__(self, n)
 
-    def perfrom_gate_logic(self):
+    def perform_gate_logic(self):
 
-        a = self.get.pin()
+        a = self.get_pin()
         if a == 0:
             return 1
         else:

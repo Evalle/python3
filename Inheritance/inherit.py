@@ -38,7 +38,7 @@ class UnaryGate(LogicGate):
         self.pin = None
 
     def get_pin(self):
-        return int(input("Enter Pin A input for gate " + self.get_label() + "-->"))
+        return int(input("Enter Pin input for gate " + self.get_label() + "-->"))
 
 
 class AndGate(BinaryGate):
@@ -71,3 +71,15 @@ class OrGate(BinaryGate):
             return 1
 
 
+class NotGate(UnaryGate):
+
+    def __init__(self, n):
+        UnaryGate.__init__(self, n)
+
+    def perfrom_gate_logic(self):
+
+        a = self.get.pin()
+        if a == 0:
+            return 1
+        else:
+            return 0

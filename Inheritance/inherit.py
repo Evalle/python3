@@ -54,3 +54,18 @@ class AndGate(BinaryGate):
             return 1
         else:
             return 0
+
+
+clss OrGate(BinaryGate):
+
+    def __init__(self, n):
+        BinaryGate.__init__(self, n)
+
+    def perfrom_gate_logic(self):
+
+        a = self.get.pinA()
+        b = self.get.pinB()
+        if a == 0 and b == 0:
+            return 0
+        else:
+            return 1

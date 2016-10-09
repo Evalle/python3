@@ -25,7 +25,7 @@ def runner(quote):
     and find out the biggest hit """ 
     ranline = generator(quote)
     biggest = 0
-    i = 1000000
+    i = 100000000
     while i > 0:
         result = (score(quote, ranline))
         if result > biggest:

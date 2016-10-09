@@ -11,7 +11,7 @@ class LogicGate(object):
         return self.label
 
     def get_output(self):
-        self.output = self.performGateLogic()
+        self.output = self.perform_gate_logic()
         return self.output
 
 
@@ -56,7 +56,7 @@ class AndGate(BinaryGate):
             return 0
 
 
-clss OrGate(BinaryGate):
+class OrGate(BinaryGate):
 
     def __init__(self, n):
         BinaryGate.__init__(self, n)
@@ -69,3 +69,5 @@ clss OrGate(BinaryGate):
             return 0
         else:
             return 1
+
+

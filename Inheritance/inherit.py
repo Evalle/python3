@@ -83,3 +83,16 @@ class NotGate(UnaryGate):
             return 1
         else:
             return 0
+
+
+class Connector:
+
+    def __init__(self, fgate, tgate):
+        self.fromgate = fgate
+        self.togate = tgate
+
+    def getFrom(self):
+        return self.fromgate
+
+    def getTo(self):
+        return self.togate

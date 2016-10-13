@@ -10,9 +10,9 @@ words = list()
 phrases = {
     "class %%%(%%%):":
       "Make a class named %%% that is-a %%%.",
-    "class %%%(object):\n\tdef __init__(self, ***)" :
+    "class %%%(object):\n\tdef __init__(self, ***)":
       "class %%% has-a __init__ that takes self and *** parameters.",
-    "class %%%(object):\n\tdef ***(self, @@@)":
+    "class %%%(object): \n\t def ***(self, @@@)":
       "class %%% has-a function named *** that takes self and @@@ parameters.",
     "*** = %%%()":
       "Set *** to an instance of class %%%.",
@@ -32,6 +32,7 @@ else:
 for word in urllib.request.urlopen(word_url).readlines():
     words.append(word.strip().decode('utf-8'))
 
+
 def convert(snippet, phrase):
     class_names = [w.capitalize() for w in 
                     random.sample(words, snippet.count("%%%"))]
@@ -40,7 +41,7 @@ def convert(snippet, phrase):
     param_names = list()
 
     for i in range(0, snippet.count("@@@")):
-        param_count = random.randint(1,3)
+        param_count = random.randint(1, 3)
         param_names.append(', '.join(random.sample(words, param_count)))
 
     for sentence in snippet, phrase:

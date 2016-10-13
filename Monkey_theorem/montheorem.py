@@ -13,7 +13,7 @@ def generator(quote):
 def score(quote, ranstr):
     """ compare random line with quote and mark it """ 
     scorenum = 0
-    for i,k in zip(quote,ranstr):
+    for i, k in zip(quote, ranstr):
         if i == k:
             scorenum += 1
     score_percent = (scorenum / len(quote)) * 100

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 # Anagram detection example, POC #1
+# o(n)
 
 keyword = 'python'
-candidate = input("Our keyword is 'python' please enter your candidate word: ")
+candidate = input("Our keyword is %s please enter your candidate word: " % keyword)
 
 
 def check_anagram(word):

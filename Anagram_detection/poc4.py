@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Anagram detection example, POC #4
-# O(n) because of sorting operations
+# O(n**2) or O(n logn) because of sorting operations
 
 def anagram_solution(s1, s2):
     c1 = [0] * 26

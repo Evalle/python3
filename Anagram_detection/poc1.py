@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Anagram detection example, POC #1
-# o(n)
+# o(n**2)
 
 keyword = 'python'
 candidate = input("Our keyword is %s please enter your candidate word: " % keyword)

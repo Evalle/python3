@@ -25,3 +25,6 @@ class Stack(object):
 
     def size(self):
         return len(self.items)
+
+    def reverse(self):
+        return self.items.reverse()

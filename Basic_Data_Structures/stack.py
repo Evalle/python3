@@ -8,6 +8,9 @@ class Stack(object):
     def __init__(self):
         self.items = list()
 
+    def show(self):
+        return self.items
+
     def isempty(self):
         return self.items == []
 

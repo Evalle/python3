@@ -4,7 +4,7 @@ class Queue(object):
         self.items = list()
 
     def enqueue(self, item):
-        self.items.append(0, item)
+        self.items.insert(0, item)
 
     def dequeue(self):
         return self.items.pop()
@@ -17,3 +17,15 @@ class Queue(object):
 
     def size(self):
         return len(self.items)
+
+    def show(self):
+        return self.items
+
+q = Queue()
+
+q.enqueue(4)
+q.enqueue('Dog')
+q.size()
+print(q.size())
+print(q.show())
+

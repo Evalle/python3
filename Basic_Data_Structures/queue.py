@@ -1,5 +1,5 @@
 class Queue(object):
-    
+
     def __init__(self):
         self.items = list()
 
@@ -20,12 +20,3 @@ class Queue(object):
 
     def show(self):
         return self.items
-
-q = Queue()
-
-q.enqueue(4)
-q.enqueue('Dog')
-q.size()
-print(q.size())
-print(q.show())
-

@@ -34,5 +34,5 @@ def new_print_task():
         return False
 
 for i in range(10):
-    sim(3600, 5)
+    sim(3600, 10)
 

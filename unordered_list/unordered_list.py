@@ -23,3 +23,16 @@ class UnorderedList(object):
             current = current.get_next()
 
         return count
+
+    def search(self, item):
+        current = self.head
+        found = False
+
+        while current != None and not found:
+            if item == current.get_data():
+                found = True
+            else:
+                current = current.get_next()
+
+        return found
+

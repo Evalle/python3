@@ -3,7 +3,7 @@
 from node_example import Node
 
 class UnorderedList(object):
-    
+
     def __init__(self):
         self.head = None
 
@@ -17,7 +17,7 @@ class UnorderedList(object):
 
     def size(self):
         current = self.head
-        count = 0 
+        count = 0
         while current != None:
             count += 1
             current = current.get_next()
@@ -35,4 +35,21 @@ class UnorderedList(object):
                 current = current.get_next()
 
         return found
+
+    def remove(self, item):
+        current = self.head
+        previous = None
+        found = False
+
+        while not found:
+            if current.get_data() == item:
+                found = True
+            else:
+                previous = current
+                current = current.get_next()
+
+        if previous == None:
+            self.head = current.get_next()
+        else:
+            previous.set_next(current.get_next())
 

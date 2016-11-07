@@ -15,4 +15,14 @@ class OrderedList(object):
             count += 1
             current = current.get_next()
 
-        return size
+        return count
+
+    def is_empty(self):
+        return self.head == None
+
+    def add(self, item):
+        temp = Node(item)
+        temp.set_next(self.head)
+        self.head = temp
+
+

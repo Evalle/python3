@@ -53,3 +53,14 @@ class UnorderedList(object):
         else:
             previous.set_next(current.get_next())
 
+    def append(self, item):
+        current = self.head
+        found_last = False
+
+        while current.get_next() != None:
+            current += 1
+            if current.get_next() == None:
+                current.set_next() = item
+                item.set_next() = None
+
+

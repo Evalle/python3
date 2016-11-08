@@ -25,4 +25,17 @@ class OrderedList(object):
         temp.set_next(self.head)
         self.head = temp
 
+    def search(self, item):
+        current = self.head
+        found = False
+        stop = False
+        while current != None and not found and not stop:
+            if current.get_data() == item:
+                found = True
+            else:
+                if current.get_data() > item:
+                    stop = True
+                else:
+                    current = current.get_next()
 
+        return found

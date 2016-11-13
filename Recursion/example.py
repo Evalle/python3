@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# not actually recursive way, but the way I will did it. 
+# not actually recursive way, but the way I will did it.
 lst = [1, 3, 5, 7, 9]
 
 def sum_list(inp):
@@ -12,4 +12,3 @@ def sum_list(inp):
     return result
 
 print(sum_list(lst))
-

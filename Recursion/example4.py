@@ -9,7 +9,7 @@ def str_rev_recur(inp):
     else:
         return str_rev_recur(inp[1:]) + inp[0]
 
-def str_reverse_non_recur(inp):
+def str_rev_non_recur(inp):
     inp = list(inp)
     new_str = list()
     if len(inp) == 1:
@@ -18,6 +18,3 @@ def str_reverse_non_recur(inp):
         for i in range(len(inp)):
             new_str.append(inp.pop())
         return ''.join(new_str)
-
-print(str_reverse_non_recur('random'))
-print(str_rev_recur('random'))

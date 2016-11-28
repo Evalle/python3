@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # sequential search
-
+# list is not ordered in any way
 
 def sequential_search(lst, item):
 

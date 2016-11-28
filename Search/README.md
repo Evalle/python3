@@ -5,3 +5,10 @@ Objectives:
 - To understand the idea of hashing as a search technique.
 - To introduce the map abstract data type.
 - To implement the map abstract data type using hashing.
+
+### Sequental search
+| case | best case | worst case | average case | 
+|------|----------|-----------|--------------| 
+| item is present | 1 | n | n/2 |
+| item is not present | n | n | n |
+

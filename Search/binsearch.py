@@ -10,7 +10,7 @@ def binary_search(lst, item):
     last = len(lst) - 1
 
     while first <= last and not found:
-        midpoint = (fitst + last) / 2
+        midpoint = (first + last) // 2
         if lst[midpoint] == item:
             found = True
         else:

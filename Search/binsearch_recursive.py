@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Simple implementation of the recursive binary search
-
+# complexety = n/2**i == O(log n)
 
 def binary_search(lst, item):
 

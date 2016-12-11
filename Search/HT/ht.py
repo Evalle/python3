@@ -3,7 +3,7 @@
 # HashTable Class
 
 
-class HashTable(class):
+class HashTable(object):
 
     def __init__(self):
         self.size = 11
@@ -21,7 +21,7 @@ class HashTable(class):
                 self.data[hashvalue] = data  # replace
             else:
                 nextslot = self.rehash(hashvalue, len(self.slots))
-                while self.slots[nextslot] not None and \
+                while self.slots[nextslot] != None and \
                                         self.slots[nextslot] != key:
                     nextslot = self.rehash(nextslot, len(self.slots))
 
@@ -44,7 +44,7 @@ class HashTable(class):
         stop = False
         found = False
         position = startslot
-        while self.slots[position] not None and not found and not stop:
+        while self.slots[position] != None and not found and not stop:
             if self.slots[position] == key:
                 found = True
                 data = self.data[position]

@@ -1,6 +1,7 @@
-#!/usr/bin/env python3 
+#!/usr/bin/env python3
 
 # Simple example of bubble sort in Python 3
+
 
 def bubble(lst):
 

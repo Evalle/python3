@@ -5,6 +5,15 @@ Text Editor - Notepad style application that can open, edit, and save text docum
 Optional: Add syntax highlighting and other features.
 '''
 
-user_input = input('> 'l)
+print("Text Editor\n 'e' - for edit\n 'o' - for open \n")
 
-if ''
+file_name = ('example.txt')
+
+user_input = (input('> ').lower())
+
+if 'o' or 'open' in user_input:
+    print('name of the file?')
+    file_name = input()
+    print(file_name)
+    open(file_name, 'w')
+

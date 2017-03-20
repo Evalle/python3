@@ -14,7 +14,7 @@ def bbl_srt(n):
             if n[i] > n[i + 1]:
                 n[i], n[i + 1] = n[i + 1], n[i]
                 changed = False
-        return n
+    return n
 
 testset = [i for i in range(100)]
 random.shuffle(testset)
